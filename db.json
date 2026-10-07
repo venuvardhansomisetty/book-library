@@ -1,0 +1,26 @@
+{
+  "books": [
+    {
+      "id": "3",
+      "title": "Wings of Fire",
+      "author": "A.P.J. Abdul Kalam",
+      "price": 350,
+      "description": "The autobiography of Dr. A.P.J. Abdul Kalam."
+    },
+    {
+      "title": "Arthashastra by chanakya",
+      "author": "Chanakya",
+      "price": "500",
+      "description": "An ancient treatise on Statement,economic policy,and military strategy",
+      "id": "rgQW2-a0KLk"
+    },
+    {
+      "title": "My life",
+      "author": "venu vardhan",
+      "price": "700",
+      "description": "About life of venu",
+      "id": "UqM-xsKMNoY"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
