@@ -20,6 +20,13 @@
       "price": "700",
       "description": "About life of venu",
       "id": "UqM-xsKMNoY"
+    },
+    {
+      "title": "my rules",
+      "author": "venu",
+      "price": "1000",
+      "description": "my own rules",
+      "id": "JI7xib7MDUg"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
