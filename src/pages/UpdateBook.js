@@ -13,12 +13,18 @@ function UpdateBook() {
     description: ""
   });
 
-  useEffect(() => {
-    if (id) {
-      getBook();
+ useEffect(() => {
+  if (!id) return;
+  const getBook = async () => {
+    try {
+      const response = await api.get(`/books/${id}`);
+      setBook(response.data);
+    } catch (error) {
+      console.error("Error fetching book:", error);
     }
-  }, [id]);
-
+  };
+  getBook();
+}, [id]);
   const getBook = async () => {
     try {
       const response = await api.get(`/books/${id}`);
