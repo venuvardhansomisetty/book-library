@@ -8,8 +8,16 @@ function ReadBook() {
   const [book, setBook] = useState(null);
 
   useEffect(() => {
-    getBook();
-  }, [id]);
+  const getBook = async () => {
+    try {
+      const response = await api.get(`/books/${id}`);
+      setBook(response.data);
+    } catch (error) {
+      console.error("Error fetching book:", error);
+    }
+  };
+  getBook();
+}, [id]);
 
   const getBook = async () => {
     try {
