@@ -9,6 +9,14 @@ function DeleteBook() {
   const [book, setBook] = useState(null);
 
   useEffect(() => {
+  const getBook = async () => {
+    try {
+      const response = await api.get(`/books/${id}`);
+      setBook(response.data);
+    } catch (error) {
+      console.error("Error fetching book:", error);
+    }
+  };
   getBook();
 }, [id]);
 
